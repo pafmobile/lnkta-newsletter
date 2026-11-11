@@ -17,22 +17,16 @@ LNKTA Security Guard. Enable **Automatically install verified releases of this
 plugin** only when the signed baseline release is published and Check GitHub now
 reports success. A same-version baseline verifies setup without reinstalling.
 
-## Publish the repository
+## Source repository
 
-The intended repository is **pafmobile/lnkta-newsletter**, public so WordPress can
-download release packages without keeping a GitHub token on the website.
-Repository creation and the first signed release are required; preparing a ZIP
-does not create or publish either of them.
-
-Create that empty repository in GitHub. Extract this source bundle on your trusted
-computer. From its root (the folder containing this README and .github), run:
+Source and the release workflow are published at **pafmobile/lnkta-newsletter**.
+The repository is public so WordPress can download packages without keeping a
+GitHub token on the website. No release is published until signing setup below
+is complete. Clone it on your trusted signing computer:
 
 ```sh
-git init -b main
-git add .
-git commit -m "Add LNKTA Newsletter 2.5.0 with signed updates"
-git remote add origin https://github.com/pafmobile/lnkta-newsletter.git
-git push -u origin main
+git clone https://github.com/pafmobile/lnkta-newsletter.git
+cd lnkta-newsletter
 ```
 
 ## Reuse the existing Security Guard signing key
